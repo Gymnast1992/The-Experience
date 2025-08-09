@@ -9,16 +9,16 @@ class Homepage {
     return cy.get(".t199__lang");
   }
   get liSection() {
-    return cy.get('.t199__menu-item-wrap');
+    return cy.get(".t199__menu-item-wrap");
   }
   get firstLi() {
-    return cy.get('.t199__menu-item-wrap').eq(0);
+    return cy.get(".t199__menu-item-wrap").eq(0);
   }
   get secondLi() {
-    return cy.get('.t199__menu-item-wrap').eq(1);
+    return cy.get(".t199__menu-item-wrap").eq(1);
   }
   get thirdLi() {
-    return cy.get('.t199__menu-item-wrap').eq(2);
+    return cy.get(".t199__menu-item-wrap").eq(2);
   }
 
   isVisibleTitle() {
@@ -56,7 +56,6 @@ class Homepage {
   thirdLiShouldHaveText(text) {
     this.thirdLi.should("have.text", text);
   }
-
 }
 
 export default new Homepage();

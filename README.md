@@ -1,11 +1,11 @@
 # The-Experience
-My book website
+The website for selling the book "The Experience"
 
 # Cypress E2E Test Suite for www.experience-book.com website
 
 Overview:
 
-This repository contains automated end-to-end tests for the "The Experience" project using Cypress framework. The test suite covers various homepage scenarios, blogs and contacts scenarious ;
+This repository contains automated end-to-end tests for the "The Experience" project using Cypress framework. The test suite covers various homepage scenarios, my_blogs and contacts scenarious ;
 
 # Before running the tests, ensure the following tools are installed:
 
@@ -33,7 +33,7 @@ npm install cypress --save-dev
 # RUN TESTS:
 
     1. npx cypress open ;
-    2. Navigate to e2e/en-homepage.cy.js ;
+    2. Navigate to cypress/e2e;
                    
 
 # DATA:
