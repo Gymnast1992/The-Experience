@@ -4,7 +4,8 @@
   "About": " About ",
   "Contacts": " Contacts ",
   "BuyNow": " Buy now ",
-  "Amazon.com": "\nAmazon.com\n",
-  "Amazon.ca": "\nAmazon.ca\n",
-  "AmazonKindle": "\nAmazon Kindle\n"
+  "Amazon.com": " Amazon US🇺🇸 ",
+  "Amazon.com.be": " Amazon BE🇧🇪 ",
+  "Amazon.fr": " Amazon FR🇫🇷 ",
+  "Amazon.es": " Amazon.es🇪🇸 "
 }

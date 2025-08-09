@@ -8,11 +8,11 @@ describe("Buy now", () => {
 
   it("Should navigate to the buy now section and verify three Amazon images", () => {
     BuyNow.verifyTheTextAmazonCom(data["Amazon.com"]);
-    BuyNow.verifyTheTextAmazonCa(data["Amazon.ca"]);
-    BuyNow.verifyTheTextAmazonKindle(data.AmazonKindle);
+    BuyNow.verifyTheTextAmazonCa(data["Amazon.com.be"]);
+    BuyNow.verifyTheTextAmazonKindle(data["Amazon.fr"]);
   });
 
-  it("The link Amazon.com sHould be clickable", () => {
+  it("The link Amazon.com should be clickable", () => {
     cy.get("#cardtitle1_776388310").click();
     cy.origin("https://www.amazon.com/dp/1779418388", () => {
       cy.get('[id="title"]').should("be.visible");
