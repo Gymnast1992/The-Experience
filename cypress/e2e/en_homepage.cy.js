@@ -50,4 +50,9 @@ describe('Homepage_FR', () => {
     cy.contains('Blog').click();
     cy.get('h1[field="title"]').should('be.visible');
   });
+
+  it('TC_08, Verify Read my blog button', () => {
+    cy.get('a.t-btn').eq(0).click();
+    cy.contains('Maksym Semiankiv').should('be.visible');
+  });
 });
