@@ -1,8 +1,8 @@
 const { before } = require('lodash');
 
-describe('Homepage', () => {
+describe('Homepage_FR', () => {
   beforeEach(() => {
-    cy.visit('/');
+    cy.visit('/en');
   });
 
   it('TC_01, User should be able to switch language from FR to EN.', () => {
@@ -21,8 +21,8 @@ describe('Homepage', () => {
     cy.get('li.t199__menu-item-wrap').should('have.length', 3);
     cy.get('li.t199__menu-item-wrap')
       .eq(0)
-      .should('have.text', ' À propos du livre ');
-    cy.get('li.t199__menu-item-wrap').eq(1).should('have.text', ' Achat ');
+      .should('have.text', ' About the book ');
+    cy.get('li.t199__menu-item-wrap').eq(1).should('have.text', ' Purchase ');
     cy.get('li.t199__menu-item-wrap').eq(2).should('have.text', ' Blog ');
   });
 
@@ -35,14 +35,14 @@ describe('Homepage', () => {
 
   it('TC_05, Verifying that button Á propos du livre is clickable and navigate user to the correct section', () => {
     cy.get('a [type="button"]').click({ force: true });
-    cy.contains('À propos du livre').click();
-    cy.get('.t-btntext__text').should('be.visible');
+    cy.contains('About the book').click();
+    cy.get('.t814__btn').eq(1).should('be.visible');
   });
 
   it('TC_06, Verifying that button Achat is clickable and navigate user to the correct section', () => {
     cy.get('a [type="button"]').click({ force: true });
-    cy.contains('Achat').click();
-    cy.get('[id="cardtitle2_1756752951"]').should('be.visible');
+    cy.contains('Purchase').click();
+    cy.get('.t-card__col').should('be.visible');
   });
 
   it('TC_07, Verifying that button Blog is clickable and navigate user to the correct section', () => {
