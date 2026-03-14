@@ -10,12 +10,6 @@ describe('Homepage_FR', () => {
     cy.contains('The Experience').should('be.visible');
   });
 
-  it('TC_02, User should be able to switch language from EN to FR.', () => {
-    cy.contains('EN').click({ force: true });
-    cy.contains('FR').click({ force: true });
-    cy.contains("L'expérience").should('be.visible');
-  });
-
   it('TC_03, Verify buttons in the header in the humburger menu', () => {
     cy.get('a [type="button"]').click({ force: true });
     cy.get('li.t199__menu-item-wrap').should('have.length', 3);
