@@ -52,4 +52,8 @@ describe('Homepage_EN', () => {
     cy.get('a.t-btn').eq(0).click();
     cy.contains('Maksym Semiankiv').should('be.visible');
   });
+
+  it('TC_09, Verify #lifestyle section on the page', () => {
+    cy.contains('#lifestyle').should('be.visible');
+  });
 });
