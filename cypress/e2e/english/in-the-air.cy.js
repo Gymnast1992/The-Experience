@@ -2,11 +2,17 @@ const { before } = require('lodash');
 
 describe('In_the_air', () => {
   beforeEach(() => {
-    cy.visit('/page108178006.html');
+    cy.visit('/page68684399.html');
   });
 
-  it('TC_01, Verify that button "Take me home" works correctly', () => {
+  it('TC_01, Verify "#in_the_air" page is displayed correctly', () => {
+    cy.get('div [class="t-col t-col_4"]')
+      .eq(0)
+      .should('contain.text', '#flyingtrapeze');
+  });
+
+  it('TC_02, Verify "Take me home" button navigates to the homepage', () => {
     cy.get('.t-menu-base__logo').click();
-    cy.get('h1.t102__title.t-title').should('have.text', "l'Expérience");
+    cy.get('h1.t102__title.t-title').should('have.text', 'The Experience');
   });
 });
