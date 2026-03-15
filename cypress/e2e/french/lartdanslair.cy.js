@@ -6,9 +6,7 @@ describe("L'art dans l'air", () => {
   });
 
   it('TC_01, Verify "Lart dans lair" page is displayed correctly', () => {
-    cy.get('div [class="t-col t-col_4"]')
-      .eq(0)
-      .should('contain.text', '#trapèzevolant');
+    cy.get('.t001__title').should('contain.text', 'LA FORMATION');
   });
 
   it('TC_02, Verify " Retour à laccueil " button navigates to the homepage', () => {

@@ -6,9 +6,7 @@ describe('In_the_air', () => {
   });
 
   it('TC_01, Verify "#in_the_air" page is displayed correctly', () => {
-    cy.get('div [class="t-col t-col_4"]')
-      .eq(0)
-      .should('contain.text', '#flyingtrapeze');
+    cy.get('.t001__title').should('contain.text', 'PRACTICE');
   });
 
   it('TC_02, Verify "Take me home" button navigates to the homepage', () => {
