@@ -57,4 +57,12 @@ describe('Homepage', () => {
   it('TC_09, Verify #lifestyle section on the page', () => {
     Homepage.sectionLifeStyle.should('be.visible');
   });
+
+  it('TC_10, Verify French Amazon link', () => {
+    cy.get('[href="https://amzn.eu/6BpwhAi"]').eq(1).should('have.attr', 'href', 'https://amzn.eu/6BpwhAi');
+  })
+
+  it('TC_10, Verify French Amazon link', () => {
+    cy.get('[href="https://amzn.eu/d/09Xg7SG3"]').eq(0).should('have.attr', 'href', 'https://amzn.eu/d/09Xg7SG3');
+  })
 });
