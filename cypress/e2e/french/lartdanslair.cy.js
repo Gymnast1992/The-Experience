@@ -2,7 +2,7 @@ const { before } = require('lodash');
 
 describe("L'art dans l'air", () => {
   beforeEach(() => {
-    cy.visit('/page108178006.html');
+    cy.visit('blog_fr/lart_dans_lair');
   });
 
   it('TC_01, Verify "Lart dans lair" page is displayed correctly', () => {

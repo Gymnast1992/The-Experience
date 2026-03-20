@@ -2,7 +2,7 @@ const { before } = require('lodash');
 
 describe('In_the_air', () => {
   beforeEach(() => {
-    cy.visit('/page68684399.html');
+    cy.visit('/blog_en/in_the_air');
   });
 
   it('TC_01, Verify "#in_the_air" page is displayed correctly', () => {

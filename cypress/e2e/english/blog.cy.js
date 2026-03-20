@@ -3,7 +3,7 @@ const text =
 
 describe('EN_myblog', () => {
   beforeEach(() => {
-    cy.visit('/my_blog_en');
+    cy.visit('/blog_en');
   });
 
   it('TC_01, Verify the main text is displayed in the page heading', () => {
