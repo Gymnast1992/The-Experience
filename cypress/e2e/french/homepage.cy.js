@@ -56,4 +56,18 @@ describe('Homepage', () => {
   it('TC_09, Verify #Styledevie section on the page', () => {
     cy.contains('#Styledevie').should('be.visible');
   });
+
+  it('TC_10, Verify US Amazon link', () => {
+    cy.get('[href="https://amazon.com/dp/1779418388"]').should(
+      'have.attr',
+      'href',
+      'https://amazon.com/dp/1779418388',
+    );
+  });
+
+  it('TC_11, Verify French Amazon link', () => {
+    cy.get('[href="https://amzn.eu/6BpwhAi"]')
+      .eq(0)
+      .should('have.attr', 'href', 'https://amzn.eu/6BpwhAi');
+  });
 });

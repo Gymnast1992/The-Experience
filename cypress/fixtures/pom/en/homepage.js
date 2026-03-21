@@ -46,6 +46,14 @@ class Homepage {
   get sectionLifeStyle() {
     return cy.contains('#lifestyle');
   }
+
+  get linkAmazonFr() {
+    return cy.get('[href="https://amzn.eu/6BpwhAi"]').eq(1);
+  }
+
+  get linkAmazonDe() {
+    return cy.get('[href="https://amzn.eu/d/09Xg7SG3"]').eq(0);
+  }
 }
 
 export default new Homepage();
