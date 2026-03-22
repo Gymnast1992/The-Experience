@@ -54,6 +54,10 @@ class Homepage {
   get linkAmazonDe() {
     return cy.get('[href="https://amzn.eu/d/09Xg7SG3"]').eq(0);
   }
+
+  verifyMainTitle(text) {
+    this.mainTitle.should('have.text', text);
+  }
 }
 
 export default new Homepage();

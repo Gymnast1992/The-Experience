@@ -1,6 +1,7 @@
 const { before } = require('lodash');
 import Homepage from '../../fixtures/pom/en/homepage';
 import BlogPage from '../../fixtures/pom/en/blog.page';
+const mainTitleText = 'The Experience';
 
 describe('Homepage', () => {
   beforeEach(() => {
@@ -8,7 +9,7 @@ describe('Homepage', () => {
   });
 
   it('TC_01, Verify homepage page title is displayed correctly', () => {
-    Homepage.mainTitle.should('have.text', 'The Experience');
+    Homepage.verifyMainTitle(mainTitleText);
   });
 
   it('TC_02, Verify EN and FR language buttons are visible in the header', () => {
