@@ -13,19 +13,19 @@ describe('Homepage', () => {
   });
 
   it('TC_02, Verify EN and FR language buttons are visible in the header', () => {
-    Homepage.buttonHambMenu.click({ force: true });
-    Homepage.buttonEn.should('have.text', 'EN');
-    Homepage.buttonFr.should('have.text', 'FR');
+    Homepage.clickHambMenu();
+    Homepage.verifyLangButtonEN();
+    Homepage.verifyLangButtonFR();
   });
 
   it('TC_03, Verify user can switch language from English to French', () => {
-    Homepage.buttonHambMenu.click({ force: true });
+    Homepage.clickHambMenu();
     Homepage.buttonFr.click();
     Homepage.mainTitle.should('have.text', "l'Expérience");
   });
 
   it('TC_04, Verify 3 header buttons are displayed in the hamburger menu', () => {
-    Homepage.buttonHambMenu.click({ force: true });
+    Homepage.clickHambMenu();
     Homepage.listingsHambMenu.should('have.length', 3);
     Homepage.liAboutTheBook.should('have.text', ' About the book ');
     Homepage.liPurchase.should('have.text', ' Purchase ');
@@ -33,19 +33,19 @@ describe('Homepage', () => {
   });
 
   it('TC_05, Verify "About the Book" button is clickable and navigates to the correct section', () => {
-    Homepage.buttonHambMenu.click({ force: true });
+    Homepage.clickHambMenu();
     Homepage.liAboutTheBook.click();
     Homepage.buttonBuyTheBook.should('be.visible');
   });
 
   it('TC_06, Verify "Purchase" button is clickable and navigates to the correct section', () => {
-    Homepage.buttonHambMenu.click({ force: true });
+    Homepage.clickHambMenu();
     Homepage.liPurchase.click();
     Homepage.buttonAmazon.should('be.visible');
   });
 
   it('TC_07, Verify "Blog" button is clickable and navigates to the correct section', () => {
-    Homepage.buttonHambMenu.click({ force: true });
+    Homepage.clickHambMenu();
     Homepage.liBlog.click();
     BlogPage.mainTitle.should('be.visible');
   });

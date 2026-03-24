@@ -58,6 +58,18 @@ class Homepage {
   verifyMainTitle(text) {
     this.mainTitle.should('have.text', text);
   }
+
+  clickHambMenu() {
+    this.buttonHambMenu.click({ force: true });
+  }
+
+  verifyLangButtonEN() {
+    this.buttonEn.should('have.text', 'EN');
+  }
+
+  verifyLangButtonFR() {
+    this.buttonFr.should('have.text', 'FR');
+  }
 }
 
 export default new Homepage();
