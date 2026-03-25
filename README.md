@@ -1,11 +1,12 @@
 # The-Experience
-The website for selling the book "The Experience"
+My personal website about my life as an artist of the 
+Cirque du Soleil and also for selling my book "The Experience"
 
 # Cypress E2E Test Suite for www.experience-book.com website
 
 Overview:
 
-This repository contains automated end-to-end tests for the "The Experience" project using Cypress framework. The test suite covers various homepage scenarios, my_blogs and contacts scenarious ;
+This repository contains automated end-to-end tests for the "The Experience" project using Cypress framework. The test suite covers various homepage scenarios, my_blogs, in_the_air, bigtop_magic and contacts;
 
 # Before running the tests, ensure the following tools are installed:
 
