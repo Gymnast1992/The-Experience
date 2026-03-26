@@ -1,6 +1,3 @@
-const text =
-  "My life is a book I'm writing right now, and I would like to live it beautifully.";
-
 class BlogPage {
   get mainTitle() {
     return cy.get('h1[field="title"]');
