@@ -26,7 +26,7 @@ describe('Homepage', () => {
 
   it('TC_04, Verify 3 header buttons are displayed in the hamburger menu', () => {
     Homepage.clickHambMenu();
-    Homepage.listingsHambMenu.should('have.length', 3);
+    Homepage.verifyLengthHambMenuLi(3);
     Homepage.liAboutTheBook.should('have.text', ' About the book ');
     Homepage.liPurchase.should('have.text', ' Purchase ');
     Homepage.liBlog.should('have.text', ' Blog ');

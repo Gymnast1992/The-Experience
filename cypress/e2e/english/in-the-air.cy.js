@@ -1,6 +1,5 @@
 const { before } = require('lodash');
 import Homepage from '../../fixtures/pom/en/homepage';
-import in_the_airPage from '../../fixtures/pom/en/in_the_air.page';
 
 describe('In_the_air', () => {
   beforeEach(() => {

@@ -1,7 +1,7 @@
 import blogPage from '../../fixtures/pom/en/blog.page';
 
 const text =
-  "My life is a book I'm writing right now, and I would like to live it beautifully.";
+  `"My life is a book I'm writing right now, and I would like to live it beautifully." Maksym Semiankiv `;
 
 describe('EN_myblog', () => {
   beforeEach(() => {
@@ -9,7 +9,7 @@ describe('EN_myblog', () => {
   });
 
   it('TC_01, Verify the main text is displayed in the page heading', () => {
-    blogPage.verifyMainTitle();
+    blogPage.verifyMainTitle(text);
   });
 
   it('TC_02, Verify image "#in_the_air" is clickable and redirects to the correct page', () => {

@@ -70,6 +70,10 @@ class Homepage {
   verifyLangButtonFR() {
     this.buttonFr.should('have.text', 'FR');
   }
+
+  verifyLengthHambMenuLi(num) {
+    this.listingsHambMenu.should('have.length', num);
+  }
 }
 
 export default new Homepage();
