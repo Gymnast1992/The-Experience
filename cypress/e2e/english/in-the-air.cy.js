@@ -1,4 +1,6 @@
 const { before } = require('lodash');
+import Homepage from '../../fixtures/pom/en/homepage';
+import in_the_airPage from '../../fixtures/pom/en/in_the_air.page';
 
 describe('In_the_air', () => {
   beforeEach(() => {
@@ -11,6 +13,6 @@ describe('In_the_air', () => {
 
   it('TC_02, Verify "Take me home" button navigates to the homepage', () => {
     cy.get('.t-menu-base__logo').click();
-    cy.get('h1.t102__title.t-title').should('have.text', 'The Experience');
+    Homepage.mainTitle.should('have.text', 'The Experience');
   });
 });
