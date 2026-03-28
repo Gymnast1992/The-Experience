@@ -1,4 +1,8 @@
 const { before } = require('lodash');
+import lartdanslairPage from '../../fixtures/pom/fr/lartdanslair.page';
+import homepage from '../../fixtures/pom/fr/homepage';
+const mainTitleText = 'LA FORMATION';
+const mainTitleHomepageFr = "l'Expérience";
 
 describe("L'art dans l'air", () => {
   beforeEach(() => {
@@ -6,11 +10,11 @@ describe("L'art dans l'air", () => {
   });
 
   it('TC_01, Verify "Lart dans lair" page is displayed correctly', () => {
-    cy.get('.t001__title').should('contain.text', 'LA FORMATION');
+    lartdanslairPage.verifyMainTitleText(mainTitleText);
   });
 
   it('TC_02, Verify " Retour à laccueil " button navigates to the homepage', () => {
-    cy.get('.t-menu-base__logo').click();
-    cy.get('h1.t102__title.t-title').should('have.text', "l'Expérience");
+    lartdanslairPage.clickReturnHomeButtonFr();
+    homepage.verifyMainTitleTextFr(mainTitleHomepageFr);
   });
 });
