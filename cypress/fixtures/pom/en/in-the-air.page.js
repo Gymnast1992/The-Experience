@@ -10,6 +10,10 @@ class inTheAirPage {
   get textFlyingTrapeze() {
     return cy.contains('#flyingtrapeze');
   }
+
+  verifyTextFlyingTrapeze() {
+    this.textFlyingTrapeze.should('be.visible');
+  }
 }
 
-export default inTheAirPage();
+export default new inTheAirPage();

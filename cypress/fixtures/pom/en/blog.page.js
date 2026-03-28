@@ -11,8 +11,20 @@ class BlogPage {
     return cy.get('.t-bgimg').eq(0);
   }
 
-  clickInTheAirImage() {
+  clickOnInTheAirImage() {
     this.imageInTheAir.click();
+  }
+
+  get imageBigtopMagic() {
+    return cy.get('.t-bgimg').eq(1);
+  }
+
+  clickOnBiogtopMagicImage() {
+    this.imageBigtopMagic.click();
+  }
+
+  isVisibleMainTitleEn() {
+    this.mainTitle.should('be.visible');
   }
 }
 

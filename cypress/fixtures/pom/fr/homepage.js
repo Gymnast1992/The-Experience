@@ -1,5 +1,5 @@
-class Homepage {
-  get mainTitle() {
+class HomepageFr {
+  get mainTitleFr() {
     return cy.get('h1.t-title');
   }
 
@@ -46,6 +46,10 @@ class Homepage {
   get linkAmznFR() {
     return cy.get('[href="https://amzn.eu/6BpwhAi"]').eq(0);
   }
+
+  verifyMainTitleTextFr(text) {
+    this.mainTitleFr.should('have.text', text);
+  }
 }
 
-export default new Homepage();
+export default new HomepageFr();

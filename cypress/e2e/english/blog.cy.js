@@ -1,7 +1,9 @@
 import blogPage from '../../fixtures/pom/en/blog.page';
+import inTheAirPage from '../../fixtures/pom/en/in-the-air.page';
+import bigtopPage from '../../fixtures/pom/en/bigtop.page';
+const mainTitleText = 'The Experience';
 
-const text =
-  `"My life is a book I'm writing right now, and I would like to live it beautifully." Maksym Semiankiv `;
+const text = `"My life is a book I'm writing right now, and I would like to live it beautifully." Maksym Semiankiv `;
 
 describe('EN_myblog', () => {
   beforeEach(() => {
@@ -13,12 +15,12 @@ describe('EN_myblog', () => {
   });
 
   it('TC_02, Verify image "#in_the_air" is clickable and redirects to the correct page', () => {
-    blogPage.clickInTheAirImage();
-    cy.contains('#flyingtrapeze').should('be.visible');
+    blogPage.clickOnInTheAirImage();
+    inTheAirPage.verifyTextFlyingTrapeze();
   });
 
   it('TC_03, Verify image "#bigtop_magic" is clickable and navigates to the correct page', () => {
-    cy.get('.t-bgimg').eq(1).click();
-    cy.get('.t-uptitle_sm').should('have.text', 'The Experience');
+    blogPage.clickOnBiogtopMagicImage();
+    bigtopPage.verifyMainTitleText(mainTitleText);
   });
 });

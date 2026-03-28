@@ -1,3 +1,5 @@
+import { link } from 'graceful-fs';
+
 class Homepage {
   get mainTitle() {
     return cy.get('h1.t-title');
@@ -73,6 +75,58 @@ class Homepage {
 
   verifyLengthHambMenuLi(num) {
     this.listingsHambMenu.should('have.length', num);
+  }
+
+  verifyAboutTheBookLi() {
+    this.liAboutTheBook.should('have.text', ' About the book ');
+  }
+
+  verifyPurchaseLi() {
+    this.liPurchase.should('have.text', ' Purchase ');
+  }
+
+  verifyBlogLi() {
+    this.liBlog.should('have.text', ' Blog ');
+  }
+
+  clickOnAboutTheBookLi() {
+    this.liAboutTheBook.click();
+  }
+
+  verifyBuyTheBookButton() {
+    this.buttonBuyTheBook.should('be.visible');
+  }
+
+  clickOnButtonFr() {
+    this.buttonFr.click();
+  }
+
+  clickPurchaseLi() {
+    this.liPurchase.click();
+  }
+
+  isVisibleButtonAmazon() {
+    this.buttonAmazon.should('be.visible');
+  }
+
+  clickBlogLi() {
+    this.liBlog.click();
+  }
+
+  clickReadMyBlogButton() {
+    this.buttonReadMyBlog.click();
+  }
+
+  isVisibleLifeStyleSection() {
+    this.sectionLifeStyle.should('be.visible');
+  }
+
+  verifyAmazonFrLink(link) {
+    this.linkAmazonFr.should('have.attr', 'href', link);
+  }
+
+  verifyAmazonDeLink(link) {
+    this.linkAmazonDe.should('have.attr', 'href', link);
   }
 }
 
