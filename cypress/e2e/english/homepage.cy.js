@@ -1,4 +1,3 @@
-const { before } = require('lodash');
 import Homepage from '../../fixtures/pom/en/homepage';
 import BlogPage from '../../fixtures/pom/en/blog.page';
 import homepage from '../../fixtures/pom/fr/homepage';

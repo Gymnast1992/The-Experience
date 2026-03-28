@@ -1,4 +1,3 @@
-const { before } = require('lodash');
 import Homepage from '../../fixtures/pom/en/homepage';
 import inTheAirPage from '../../fixtures/pom/en/in-the-air.page';
 const mainTitleText = 'PRACTICE';

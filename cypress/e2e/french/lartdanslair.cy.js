@@ -1,4 +1,3 @@
-const { before } = require('lodash');
 import lartdanslairPage from '../../fixtures/pom/fr/lartdanslair.page';
 import homepage from '../../fixtures/pom/fr/homepage';
 const mainTitleText = 'LA FORMATION';
