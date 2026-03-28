@@ -1,4 +1,4 @@
-const { before } = require('lodash');
+//const { before } = require('lodash');
 import Homepage from '../../fixtures/pom/fr/homepage';
 import BlogPage from '../../fixtures/pom/fr/blog.page';
 
@@ -8,7 +8,7 @@ describe('Homepage', () => {
   });
 
   it('TC_01, Verify homepage page title is displayed correctly', () => {
-    Homepage.mainTitle.should('have.text', "l'Expérience");
+    Homepage.mainTitleFr.should('have.text', "l'Expérience");
   });
 
   it('TC_02, Verify EN and FR language buttons are visible in the header', () => {
@@ -19,7 +19,7 @@ describe('Homepage', () => {
 
   it('TC_03, Verify user can switch language from French to English', () => {
     Homepage.buttonEn.click({ force: true });
-    Homepage.mainTitle.should('have.text', 'The Experience');
+    Homepage.mainTitleFr.should('have.text', 'The Experience');
   });
 
   it('TC_04, Verify 3 header buttons are displayed in the hamburger menu', () => {
@@ -45,7 +45,7 @@ describe('Homepage', () => {
   it('TC_07, Verify "Blog" button is clickable and navigates to the correct section', () => {
     Homepage.buttonHambMenu.click({ force: true });
     Homepage.headerLi.eq(2).click();
-    BlogPage.mainBlogTitle.should('be.visible');
+    BlogPage.mainBlogTitleText.should('be.visible');
   });
 
   it('TC_08, Verify "En savoir plus" button is clickable and navigates to the correct section', () => {

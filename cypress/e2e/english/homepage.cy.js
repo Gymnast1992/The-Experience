@@ -2,8 +2,8 @@ const { before } = require('lodash');
 import Homepage from '../../fixtures/pom/en/homepage';
 import BlogPage from '../../fixtures/pom/en/blog.page';
 import homepage from '../../fixtures/pom/fr/homepage';
-const mainTitleTextEn = 'The Experience';
-const mainTitleTextFr = "l'Expérience";
+const mainTitleHomepageEn = 'The Experience';
+const mainTitleHomepageFr = "l'Expérience";
 const linkAmazonFr = 'https://amzn.eu/6BpwhAi';
 const linkAmazonDe = 'https://amzn.eu/d/09Xg7SG3';
 
@@ -13,7 +13,7 @@ describe('Homepage', () => {
   });
 
   it('TC_01, Verify homepage page title is displayed correctly', () => {
-    Homepage.verifyMainTitle(mainTitleTextEn);
+    Homepage.verifyMainTitle(mainTitleHomepageEn);
   });
 
   it('TC_02, Verify EN and FR language buttons are visible in the header', () => {
@@ -25,7 +25,7 @@ describe('Homepage', () => {
   it('TC_03, Verify user can switch language from English to French', () => {
     Homepage.clickHambMenu();
     Homepage.clickOnButtonFr();
-    homepage.verifyMainTitleTextFr(mainTitleTextFr);
+    homepage.verifyMainTitleTextFr(mainTitleHomepageFr);
   });
 
   it('TC_04, Verify 3 header buttons are displayed in the hamburger menu', () => {

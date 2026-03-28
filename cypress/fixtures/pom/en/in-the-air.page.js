@@ -14,6 +14,14 @@ class inTheAirPage {
   verifyTextFlyingTrapeze() {
     this.textFlyingTrapeze.should('be.visible');
   }
+
+  verifyMainTitleText(title) {
+    this.mainTitle.should('contain.text', title);
+  }
+
+  clickTakeMeHomeButton() {
+    this.buttonTakeMeHome.click();
+  }
 }
 
 export default new inTheAirPage();

@@ -1,5 +1,9 @@
-const text =
-  "Ma vie est un livre que j'écris en ce moment même, et j'aimerais la vivre de façon magnifique.";
+import blogPage from '../../fixtures/pom/fr/blog.page';
+import lartdanslairPage from '../../fixtures/pom/fr/lartdanslair.page';
+import magieduchapiteauPage from '../../fixtures/pom/fr/magieduchapiteau.page';
+const mainTitleBlogText =
+  `"Ma vie est un livre que j'écris en ce moment même, et j'aimerais la vivre de façon magnifique." Maksym Semiankiv `;
+const mainTitleTextFr = "L'expérience";
 
 describe('Blog', () => {
   beforeEach(() => {
@@ -7,16 +11,16 @@ describe('Blog', () => {
   });
 
   it('TC_01, Verify the main text is displayed in the page heading', () => {
-    cy.contains(text).should('be.visible');
+    blogPage.verifyMainTitleBlogText(mainTitleBlogText);
   });
 
   it('TC_02, Verify image "Lart dans lair" is clickable and redirects to the correct page', () => {
-    cy.get('.t-bgimg').eq(0).click();
-    cy.contains('#trapèzevolant').should('be.visible');
+    blogPage.clickLartDansLairImage();
+    lartdanslairPage.isVisibleTitle();
   });
 
   it('TC_03, Verify image "La Magie du Chapiteau" is clickable and navigates to the correct page', () => {
-    cy.get('.t-bgimg').eq(1).click();
-    cy.get('.t-uptitle_sm').should('have.text', "L'expérience");
+    blogPage.clickMagieDuChapiteauImage();
+    magieduchapiteauPage.verifyMainTitleText(mainTitleTextFr);
   });
 });
