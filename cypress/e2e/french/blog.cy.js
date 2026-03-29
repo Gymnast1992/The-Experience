@@ -5,7 +5,7 @@ const mainTitleBlogText =
   `"Ma vie est un livre que j'écris en ce moment même, et j'aimerais la vivre de façon magnifique." Maksym Semiankiv `;
 const mainTitleTextFr = "L'expérience";
 
-describe('Blog', () => {
+describe('Blog_fr', () => {
   beforeEach(() => {
     cy.visit('/blog_fr');
   });

@@ -4,7 +4,7 @@ import bigtopPage from '../../fixtures/pom/en/bigtop.page';
 const mainTitleText = 'The Experience';
 const text = `"My life is a book I'm writing right now, and I would like to live it beautifully." Maksym Semiankiv `;
 
-describe('EN_myblog', () => {
+describe('Blog_en', () => {
   beforeEach(() => {
     cy.visit('/blog_en');
   });
