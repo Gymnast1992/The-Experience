@@ -3,7 +3,7 @@ import homepage from '../../fixtures/pom/fr/homepage';
 const mainTitleText = 'LA FORMATION';
 const mainTitleHomepageFr = "l'Expérience";
 
-describe("L'art dans l'air", () => {
+describe("Lart dans lair", () => {
   beforeEach(() => {
     cy.visit('blog_fr/lart_dans_lair');
   });
