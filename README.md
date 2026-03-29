@@ -6,7 +6,7 @@ Cirque du Soleil and also for selling my book "The Experience"
 
 Overview:
 
-This repository contains automated end-to-end tests for the "The Experience" project using Cypress framework. The test suite covers various homepage scenarios, my_blogs, in_the_air, bigtop_magic and contacts;
+This repository contains automated end-to-end tests for the "The Experience" project using Cypress framework. The test suite covers various homepage scenarios, my_blogs, in_the_air, bigtop_magic and contacts, both in English and in French languages;
 
 # Before running the tests, ensure the following tools are installed:
 
