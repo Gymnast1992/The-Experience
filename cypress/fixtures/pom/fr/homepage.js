@@ -1,5 +1,7 @@
+import { title } from 'process';
+
 class HomepageFr {
-  get mainTitleFr() {
+  get mainTitle() {
     return cy.get('h1.t-title');
   }
 
@@ -48,7 +50,55 @@ class HomepageFr {
   }
 
   verifyMainTitleTextFr(text) {
-    this.mainTitleFr.should('have.text', text);
+    this.mainTitle.should('have.text', text);
+  }
+
+  verifyMainTitleFr(title) {
+    this.mainTitle.should('have.text', title);
+  }
+
+  clickHambMenuButton() {
+    this.buttonHambMenu.click({ force: true });
+  }
+
+  verifyEnglishButton() {
+    this.buttonEn.should('have.text', 'EN');
+  }
+
+  verifyFrenchButton() {
+    this.buttonFr.should('have.text', 'FR');
+  }
+
+  clickEnglishButton() {
+    this.buttonEn.click({ force: true });
+  }
+
+  verifyMainTitleEn(text) {
+    this.mainTitle.should('have.text', text);
+  }
+
+  verifyHeaderLiLength(length) {
+    this.headerLi.should('have.length', length);
+  }
+
+  verifyFirstHeaderLi(text) {
+    this.headerLi.eq(0).should('have.text', text);
+  }
+
+  verifySecondHeaderLi(text) {
+    this.headerLi.eq(1).should('have.text', text);
+  }
+
+  verifyThirdHeaderLi(text) {
+    this.headerLi.eq(2).should('have.text', text);
+  }
+
+  clickFirstHeaderLi() {
+    this.headerLi.eq(0).click();
+  }
+
+  isVisibleActionButton() {
+    this.buttonAction.should('be.visible');
   }
 }
 
