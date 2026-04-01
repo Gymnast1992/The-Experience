@@ -104,6 +104,34 @@ class HomepageFr {
   clickSecondHeaderLi() {
     this.headerLi.eq(1).click();
   }
+
+  verifyAmazonCard() {
+    this.cardAmazon.should('be.visible');
+  }
+
+  clickThirdHeaderLi() {
+    this.headerLi.eq(2).click();
+  }
+
+  clickEnSavoirPlusButton() {
+    this.buttonEnSavoirPlus.click();
+  }
+
+  verifyAuthorName() {
+    this.authorName.should('be.visible');
+  }
+
+  verifyStyleDeVieTitle() {
+    this.titleStyleDeVie.should('be.visible');
+  }
+
+  verifyAmazonUSLink(link) {
+    this.linkAmznUS.should('have.attr', 'href', link);
+  }
+
+  verifyAmazonFRLink(link) {
+    this.linkAmznFR.should('have.attr', 'href', link);
+  }
 }
 
 export default new HomepageFr();

@@ -1,10 +1,14 @@
 import Homepage from '../../fixtures/pom/fr/homepage';
 import BlogPage from '../../fixtures/pom/fr/blog.page';
+const mainTitleBlogText =
+  `"Ma vie est un livre que j'écris en ce moment même, et j'aimerais la vivre de façon magnifique." Maksym Semiankiv `;
 const mainTitleTextFr = "l'Expérience";
 const mainTitleTextEn = 'The Experience';
 const firstHeaderLi = ' À propos du livre ';
 const secondHeaderLi = ' Achat ';
 const thirdHeaderLi = ' Blog ';
+const linkAmazonUS = 'https://amazon.com/dp/1779418388';
+const linkAmazonFR = 'https://amzn.eu/6BpwhAi';
 
 describe('Homepage', () => {
   beforeEach(() => {
@@ -43,33 +47,29 @@ describe('Homepage', () => {
   it('TC_06, Verify "Achat" button is clickable and navigates to the correct section', () => {
     Homepage.clickHambMenuButton();
     Homepage.clickSecondHeaderLi();
-    Homepage.cardAmazon.should('be.visible');
+    Homepage.verifyAmazonCard();
   });
 
   it('TC_07, Verify "Blog" button is clickable and navigates to the correct section', () => {
     Homepage.clickHambMenuButton();
-    Homepage.headerLi.eq(2).click();
-    BlogPage.mainBlogTitleText.should('be.visible');
+    Homepage.clickThirdHeaderLi();
+    BlogPage.verifyMainTitleBlogText(mainTitleBlogText);
   });
 
   it('TC_08, Verify "En savoir plus" button is clickable and navigates to the correct section', () => {
-    Homepage.buttonEnSavoirPlus.click();
-    Homepage.authorName.should('be.visible');
+    Homepage.clickEnSavoirPlusButton();
+    Homepage.verifyAuthorName();
   });
 
   it('TC_09, Verify #Styledevie section on the page', () => {
-    Homepage.titleStyleDeVie.should('be.visible');
+    Homepage.verifyStyleDeVieTitle();
   });
 
   it('TC_10, Verify US Amazon link', () => {
-    Homepage.linkAmznUS.should(
-      'have.attr',
-      'href',
-      'https://amazon.com/dp/1779418388',
-    );
+    Homepage.verifyAmazonUSLink(linkAmazonUS);
   });
 
   it('TC_11, Verify French Amazon link', () => {
-    Homepage.linkAmznFR.should('have.attr', 'href', 'https://amzn.eu/6BpwhAi');
+    Homepage.verifyAmazonFRLink(linkAmazonFR);
   });
 });

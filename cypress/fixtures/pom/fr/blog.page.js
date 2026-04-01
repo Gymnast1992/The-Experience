@@ -22,6 +22,10 @@ class blogPageFr {
   clickMagieDuChapiteauImage() {
     this.imageMagieDuChapiteau.click();
   }
+
+  verifyMainBlogTitleText() {
+    this.mainBlogTitleText.should('be.visible');
+  }
 }
 
 export default new blogPageFr();
