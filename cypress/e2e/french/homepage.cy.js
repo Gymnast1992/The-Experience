@@ -42,7 +42,7 @@ describe('Homepage', () => {
 
   it('TC_06, Verify "Achat" button is clickable and navigates to the correct section', () => {
     Homepage.clickHambMenuButton();
-    Homepage.headerLi.eq(1).click();
+    Homepage.clickSecondHeaderLi();
     Homepage.cardAmazon.should('be.visible');
   });
 

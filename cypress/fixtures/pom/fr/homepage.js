@@ -100,6 +100,10 @@ class HomepageFr {
   isVisibleActionButton() {
     this.buttonAction.should('be.visible');
   }
+
+  clickSecondHeaderLi() {
+    this.headerLi.eq(1).click();
+  }
 }
 
 export default new HomepageFr();
