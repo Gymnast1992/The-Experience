@@ -1,7 +1,7 @@
 import blogPage from '../../fixtures/pom/en/blog.page';
 import inTheAirPage from '../../fixtures/pom/en/in-the-air.page';
 import bigtopPage from '../../fixtures/pom/en/bigtop.page';
-const mainTitleText = 'The Experience';
+const mainBlogTitleText = 'Big Top Magic';
 const text = `"My life is a book I'm writing right now, and I would like to live it beautifully." Maksym Semiankiv `;
 
 describe('Blog_en', () => {
@@ -20,6 +20,6 @@ describe('Blog_en', () => {
 
   it('TC_03, Verify image "#bigtop_magic" is clickable and navigates to the correct page', () => {
     blogPage.clickOnBiogtopMagicImage();
-    bigtopPage.verifyMainTitleText(mainTitleText);
+    bigtopPage.verifyMainTitleText(mainBlogTitleText);
   });
 });

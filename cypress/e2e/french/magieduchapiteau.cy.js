@@ -1,5 +1,5 @@
 import magieduchapiteauPage from "../../fixtures/pom/fr/magieduchapiteau.page";
-const mainTitleTextFr = "L'expérience";
+const mainTitleBlogTextFr = 'La Magie du Chapiteau';
 
 describe('MagieduChapiteau', () => {
   beforeEach(() => {
@@ -7,7 +7,7 @@ describe('MagieduChapiteau', () => {
   });
 
   it('TC_01, Verify the main title on the page', () => {
-    magieduchapiteauPage.verifyMainTitleText(mainTitleTextFr);
+    magieduchapiteauPage.verifyMainTitleText(mainTitleBlogTextFr);
   })
 
   it('TC_02, Verify the length of pictures listing', () => {

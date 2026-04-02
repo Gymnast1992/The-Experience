@@ -3,7 +3,7 @@ import lartdanslairPage from '../../fixtures/pom/fr/lartdanslair.page';
 import magieduchapiteauPage from '../../fixtures/pom/fr/magieduchapiteau.page';
 const mainTitleBlogText =
   `"Ma vie est un livre que j'écris en ce moment même, et j'aimerais la vivre de façon magnifique." Maksym Semiankiv `;
-const mainTitleTextFr = "L'expérience";
+const mainTitleBlogTextFr = 'La Magie du Chapiteau';
 
 describe('Blog_fr', () => {
   beforeEach(() => {
@@ -21,6 +21,6 @@ describe('Blog_fr', () => {
 
   it('TC_03, Verify image "La Magie du Chapiteau" is clickable and navigates to the correct page', () => {
     blogPage.clickMagieDuChapiteauImage();
-    magieduchapiteauPage.verifyMainTitleText(mainTitleTextFr);
+    magieduchapiteauPage.verifyMainTitleText(mainTitleBlogTextFr);
   });
 });

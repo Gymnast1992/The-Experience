@@ -1,5 +1,5 @@
 import bigtopPage from '../../fixtures/pom/en/bigtop.page';
-const mainTitleTextEn = 'The Experience';
+const mainTitleTextEn = 'Big Top Magic';
 
 describe('Bigtop-magic', () => {
   beforeEach(() => {
