@@ -68,7 +68,15 @@ npx cypress run
 
 ## 🚀 CI/CD (Optional)
 
-This project can be easily integrated into CI/CD pipelines (e.g., GitHub Actions) for continuous testing and faster feedback cycles.
+CI/CD is fully integrated into this project to ensure continuous testing and fast feedback on code changes.
+
+ * Automated test execution on each push and pull request
+
+ * Headless test runs using Cypress
+
+ * Early detection of regressions
+
+ * Improved code quality and deployment confidence
 
 ---
 
@@ -79,5 +87,8 @@ Maks – QA Engineer with experience in test automation, focused on delivering r
 ## Resume
 You can download my Resume [here](https://drive.google.com/file/d/1yy_l69whE9OrGsjSwpQgFgL5wz04D0_j/view?usp=sharing) 
 
+---
+
 **LinkedIn** https://www.linkedin.com/in/maksymsemiankiv 
+
 **Email** semiankivmaksym@gmail.com
