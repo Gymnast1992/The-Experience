@@ -4,11 +4,11 @@ import homepage from '../../fixtures/pom/fr/homepage';
 const mainTitleHomepageEn = 'The Experience';
 const mainTitleHomepageFr = "l'Expérience";
 const linkAmazonFr = 'https://amzn.eu/6BpwhAi';
-const linkAmazonDe = 'https://amzn.eu/d/09Xg7SG3';
+const linkAmazonEs = 'https://www.amazon.es/dp/1779418396';
 
 describe('Homepage', () => {
   beforeEach(() => {
-    cy.visit('/en');
+    cy.visit('/');
   });
 
   it('TC_01, Verify homepage page title is displayed correctly', () => {
@@ -62,11 +62,11 @@ describe('Homepage', () => {
     Homepage.isVisibleLifeStyleSection();
   });
 
-  it('TC_10, Verify Germany Amazon link', () => {
+  it('TC_10, Verify French Amazon link', () => {
     Homepage.verifyAmazonFrLink(linkAmazonFr);
   });
 
-  it('TC_11, Verify French Amazon link', () => {
-    Homepage.verifyAmazonDeLink(linkAmazonDe);
+  it('TC_11, Verify Spanish Amazon link', () => {
+    Homepage.verifyAmazonEsLink(linkAmazonEs);
   });
 });

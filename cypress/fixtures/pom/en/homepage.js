@@ -53,8 +53,8 @@ class Homepage {
     return cy.get('[href="https://amzn.eu/6BpwhAi"]').eq(1);
   }
 
-  get linkAmazonDe() {
-    return cy.get('[href="https://amzn.eu/d/09Xg7SG3"]').eq(0);
+  get linkAmazonEs() {
+    return cy.get('[href="https://www.amazon.es/dp/1779418396"]').eq(0);
   }
 
   verifyMainTitle(text) {
@@ -125,8 +125,8 @@ class Homepage {
     this.linkAmazonFr.should('have.attr', 'href', link);
   }
 
-  verifyAmazonDeLink(link) {
-    this.linkAmazonDe.should('have.attr', 'href', link);
+  verifyAmazonEsLink(link) {
+    this.linkAmazonEs.should('have.attr', 'href', link);
   }
 }
 
