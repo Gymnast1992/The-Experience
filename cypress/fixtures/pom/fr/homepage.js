@@ -41,8 +41,8 @@ class HomepageFr {
     return cy.contains('#Styledevie');
   }
 
-  get linkAmznUS() {
-    return cy.get('[href="https://amazon.com/dp/1779418388"]');
+  get linkAmznES() {
+    return cy.get('[href="https://amzn.eu/dNrY8vj"]');
   }
 
   get linkAmznFR() {
@@ -125,8 +125,8 @@ class HomepageFr {
     this.titleStyleDeVie.should('be.visible');
   }
 
-  verifyAmazonUSLink(link) {
-    this.linkAmznUS.should('have.attr', 'href', link);
+  verifyAmazonESLink(link) {
+    this.linkAmznES.should('have.attr', 'href', link);
   }
 
   verifyAmazonFRLink(link) {
