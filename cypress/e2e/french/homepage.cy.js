@@ -7,12 +7,12 @@ const mainTitleTextEn = 'The Experience';
 const firstHeaderLi = ' À propos du livre ';
 const secondHeaderLi = ' Achat ';
 const thirdHeaderLi = ' Blog ';
-const linkAmazonUS = 'https://amazon.com/dp/1779418388';
+const linkAmazonES = 'https://amzn.eu/dNrY8vj';
 const linkAmazonFR = 'https://amzn.eu/6BpwhAi';
 
 describe('Homepage', () => {
   beforeEach(() => {
-    cy.visit('/');
+    cy.visit('/fr');
   });
 
   it('TC_01, Verify homepage page title is displayed correctly', () => {
@@ -65,11 +65,11 @@ describe('Homepage', () => {
     Homepage.verifyStyleDeVieTitle();
   });
 
-  it('TC_10, Verify US Amazon link', () => {
-    Homepage.verifyAmazonUSLink(linkAmazonUS);
+  it('TC_10, Verify ES Amazon link', () => {
+    Homepage.verifyAmazonESLink(linkAmazonES);
   });
 
-  it('TC_11, Verify French Amazon link', () => {
+  it('TC_11, Verify FR Amazon link', () => {
     Homepage.verifyAmazonFRLink(linkAmazonFR);
   });
 });
