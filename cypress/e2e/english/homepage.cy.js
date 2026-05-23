@@ -3,7 +3,7 @@ import BlogPage from '../../fixtures/pom/en/blog.page';
 import homepage from '../../fixtures/pom/fr/homepage';
 const mainTitleHomepageEn = 'The Experience';
 const mainTitleHomepageFr = "l'Expérience";
-const linkAmazonFr = 'https://amzn.eu/6BpwhAi';
+const linkAmazonFr = 'https://www.amazon.fr/-/en/Maksym-Semiankiv/dp/1779418388/';
 const linkAmazonEs = 'https://www.amazon.es/dp/1779418396';
 
 describe('Homepage', () => {

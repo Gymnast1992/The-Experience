@@ -3,16 +3,24 @@ class bigtopMagic {
     return cy.get('.t-uptitle_sm');
   }
 
-  verifyMainTitleText(text) {
-    this.mainTitleText.should('have.text', text);
-  }
-
   get picturesLi() {
     return cy.get('ul li');
   }
 
+  get takeMeHomeBtn() {
+    return cy.get('.t-menu-base__logo');
+  }
+
   verifyTheLengthOfTheLi(length) {
-    this.picturesLi.should('have.length', length)
+    this.picturesLi.should('have.length', length);
+  }
+
+  verifyMainTitleText(text) {
+    this.mainTitleText.should('have.text', text);
+  }
+
+  clickTakeMeHomeBtn() {
+    this.takeMeHomeBtn.click();
   }
 }
 

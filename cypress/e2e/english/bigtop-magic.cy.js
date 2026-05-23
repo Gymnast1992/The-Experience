@@ -1,5 +1,7 @@
 import bigtopPage from '../../fixtures/pom/en/bigtop.page';
+import Homepage from '../../fixtures/pom/en/homepage';
 const mainTitleTextEn = 'Big Top Magic';
+const mainTitleHomepageEn = 'The Experience';
 
 describe('Bigtop-magic', () => {
   beforeEach(() => {
@@ -12,5 +14,10 @@ describe('Bigtop-magic', () => {
 
   it('TC_02, Verify the length of pictures listing', () => {
     bigtopPage.verifyTheLengthOfTheLi(12);
+  });
+
+  it('TC_03, Verify "Take me home" button navigates to the homepage', () => {
+    bigtopPage.clickTakeMeHomeBtn();
+    Homepage.verifyMainTitle(mainTitleHomepageEn);
   });
 });
