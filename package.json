@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "cypress": "^13.17.0"
+    "cypress": "^15.15.0"
   },
   "name": "the-experience",
   "version": "1.0.0",
