@@ -3,20 +3,20 @@ class blogPageFr {
     return cy.get('h1[field="title"]');
   }
 
-  verifyMainTitleBlogText(text) {
-    this.mainBlogTitleText.should('have.text', text);
+  get returnHomeBtn() {
+    return cy.get('.t-menu-base__logo');
   }
 
   get imageLartDansLair() {
     return cy.get('.t-bgimg').eq(0);
   }
 
-  clickLartDansLairImage() {
-    this.imageLartDansLair.click();
-  }
-
   get imageMagieDuChapiteau() {
     return cy.get('.t-bgimg').eq(1);
+  }
+
+  clickLartDansLairImage() {
+    this.imageLartDansLair.click();
   }
 
   clickMagieDuChapiteauImage() {
@@ -25,6 +25,14 @@ class blogPageFr {
 
   verifyMainBlogTitleText() {
     this.mainBlogTitleText.should('be.visible');
+  }
+
+  clickReturnHomeBtn() {
+    this.returnHomeBtn.click();
+  }
+
+  verifyMainTitleBlogText(text) {
+    this.mainBlogTitleText.should('have.text', text);
   }
 }
 

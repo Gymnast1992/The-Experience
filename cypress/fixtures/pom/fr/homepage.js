@@ -94,7 +94,7 @@ class HomepageFr {
   }
 
   clickFirstHeaderLi() {
-    this.headerLi.eq(0).click();
+    this.headerLi.eq(0).click({force: true});
   }
 
   isVisibleActionButton() {

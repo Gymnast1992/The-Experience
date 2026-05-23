@@ -13,7 +13,7 @@ describe("Lart dans lair", () => {
   });
 
   it('TC_02, Verify " Retour à laccueil " button navigates to the homepage', () => {
-    lartdanslairPage.clickReturnHomeButtonFr();
+    lartdanslairPage.clickReturnHomeBtn();
     homepage.verifyMainTitleTextFr(mainTitleHomepageFr);
   });
 });
