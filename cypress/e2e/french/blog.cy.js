@@ -25,7 +25,7 @@ describe('Blog_fr', () => {
     magieduchapiteauPage.verifyMainTitleText(mainTitleBlogTextFr);
   });
 
-  it('TC_04, Verify " Retour à laccueil " button navigates to the homepage', () => {
+  it('TC_04, Verify "Return Home" button navigates to the homepage', () => {
     blogPage.clickReturnHomeBtn();
     homepage.verifyMainTitleTextFr(mainTitleHomepageFr);
   });

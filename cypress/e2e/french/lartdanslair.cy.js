@@ -12,7 +12,7 @@ describe("Lart dans lair", () => {
     lartdanslairPage.verifyMainTitleText(mainTitleText);
   });
 
-  it('TC_02, Verify " Retour à laccueil " button navigates to the homepage', () => {
+  it('TC_02, Verify "Return Home" button navigates to the homepage', () => {
     lartdanslairPage.clickReturnHomeBtn();
     homepage.verifyMainTitleTextFr(mainTitleHomepageFr);
   });
