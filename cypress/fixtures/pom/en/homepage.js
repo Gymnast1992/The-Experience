@@ -50,7 +50,11 @@ class Homepage {
   }
 
   get linkAmazonFr() {
-    return cy.get('[href="https://www.amazon.fr/-/en/Maksym-Semiankiv/dp/1779418388/"]').eq(1);
+    return cy
+      .get(
+        '[href="https://www.amazon.fr/-/en/Maksym-Semiankiv/dp/1779418388/"]',
+      )
+      .eq(1);
   }
 
   get linkAmazonEs() {

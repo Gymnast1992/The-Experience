@@ -25,7 +25,7 @@ describe('Blog_en', () => {
     bigtopPage.verifyMainTitleText(mainBlogTitleText);
   });
 
-  it('TC_02, Verify "Take me home" button navigates to the homepage', () => {
+  it('TC_02, Verify "Homepage" button navigates to the homepage', () => {
       blogPage.clickTakeMeHomeBtn();
       Homepage.verifyMainTitle(mainTitleHomepageEn);
     });

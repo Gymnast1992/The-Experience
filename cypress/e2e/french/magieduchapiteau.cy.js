@@ -16,7 +16,7 @@ describe('MagieduChapiteau', () => {
     magieduchapiteauPage.verifyLengthOfTheLi(13);
   });
 
-  it('TC_03, Verify "Return Home" button navigates to the homepage', () => {
+  it('TC_03, Verify "Homepage" button navigates to the homepage', () => {
     magieduchapiteauPage.clickReturnHomeBtn();
     homepage.verifyMainTitleTextFr(mainTitleHomepageFr);
   });

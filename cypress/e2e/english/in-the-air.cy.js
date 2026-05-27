@@ -12,7 +12,7 @@ describe('In_the_air', () => {
     inTheAirPage.verifyMainTitleText(mainTitleText);
   });
 
-  it('TC_02, Verify "Take me home" button navigates to the homepage', () => {
+  it('TC_02, Verify "Homepage" button navigates to the homepage', () => {
     inTheAirPage.clickTakeMeHomeButton();
     Homepage.verifyMainTitle(mainTitleHomepageEn);
   });

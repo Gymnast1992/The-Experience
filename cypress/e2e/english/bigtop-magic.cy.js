@@ -16,7 +16,7 @@ describe('Bigtop-magic', () => {
     bigtopPage.verifyTheLengthOfTheLi(12);
   });
 
-  it('TC_03, Verify "Take me home" button navigates to the homepage', () => {
+  it('TC_03, Verify "Homepage" button navigates to the homepage', () => {
     bigtopPage.clickTakeMeHomeBtn();
     Homepage.verifyMainTitle(mainTitleHomepageEn);
   });

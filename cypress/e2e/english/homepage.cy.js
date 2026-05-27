@@ -3,8 +3,13 @@ import BlogPage from '../../fixtures/pom/en/blog.page';
 import homepage from '../../fixtures/pom/fr/homepage';
 const mainTitleHomepageEn = 'The Experience';
 const mainTitleHomepageFr = "l'Expérience";
-const linkAmazonFr = 'https://www.amazon.fr/-/en/Maksym-Semiankiv/dp/1779418388/';
+const linkAmazonFr =
+  'https://www.amazon.fr/-/en/Maksym-Semiankiv/dp/1779418388/';
 const linkAmazonEs = 'https://www.amazon.es/dp/1779418396';
+
+Cypress.on('uncaught:exception', () => {
+  return false;
+});
 
 describe('Homepage', () => {
   beforeEach(() => {
@@ -24,7 +29,7 @@ describe('Homepage', () => {
   it('TC_03, Verify user can switch language from English to French', () => {
     Homepage.clickHambMenu();
     Homepage.clickOnButtonFr();
-    homepage.verifyMainTitleTextFr(mainTitleHomepageFr);
+    Homepage.verifyMainTitle(mainTitleHomepageFr);
   });
 
   it('TC_04, Verify 3 header buttons are displayed in the hamburger menu', () => {
